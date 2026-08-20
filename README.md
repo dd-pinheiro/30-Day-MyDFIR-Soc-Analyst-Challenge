@@ -1,7 +1,7 @@
 # 30-Day SOC Analyst Challenge (MyDFIR) - Hands-on Lab 
 
 ## 📌 Visão Geral do Projeto
-Este repositório documenta a implementação prática de um ambiente de **Security Operations Center (SOC)** criado durante o desafio de 30 dias do canal **MyDFIR**. O objetivo principal foi construir uma infraestrutura de monitoramento SOC na nuvem, simular ataques cibernéticos em tempo real e estruturar o fluxo de trabalho de resposta a incidentes.
+Este repositório documenta a implementação prática de um ambiente de **Security Operations Center (SOC)** criado durante o desafio de 30 dias do canal **MyDFIR**. O objetivo principal foi construir uma infraestrutura de monitoramento SOC na nuvem, simular ataques cibernéticos em tempo real e aprender como funciona o fluxo de trabalho de resposta a incidentes de Segurança.
 
 ---
 
