@@ -14,7 +14,7 @@ Utilizei o provedor Vultr para hospedar o SIEM.
 * **Configurações Iniciais:**
     1. Acesso via SSH com senha
     2. Atualização do sistema: `sudo apt update && sudo apt upgrade -y`
-    3. Configuração de Firewall (UFW): habilitar porta 9200 (porta utilizada pelo Elasticsearch)
+    3. Configuração de Firewall (UFW): habilitar porta 9200 e 5601 (portas utilizadas pelo Elasticsearch e Kibana)
 
 ---
 
