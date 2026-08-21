@@ -35,3 +35,7 @@ O Elasticsearch é a espinha dorsal do SIEM, ou seja, aprendendo Elasticsearch v
   sudo systemctl daemon-reload
   sudo systemctl enable elasticsearch
   sudo systemctl start elasticsearch
+
+### Configuração de Firewall
+Para evitar ataques de Brute Force neste servidor, criei a seguinte regra de Firewall no Vultr:
+
