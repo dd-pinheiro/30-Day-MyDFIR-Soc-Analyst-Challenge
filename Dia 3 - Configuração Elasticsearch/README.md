@@ -37,5 +37,8 @@ O Elasticsearch é a espinha dorsal do SIEM, ou seja, aprendendo Elasticsearch v
   sudo systemctl start elasticsearch
 
 ### Configuração de Firewall
-Para evitar ataques de Brute Force neste servidor, criei a seguinte regra de Firewall no Vultr:
+Para evitar ataques de Brute Force SSH neste servidor, criei a seguinte regra de Firewall no Vultr:
+![regrafirewall](https://github.com/dd-pinheiro/30-Day-MyDFIR-Soc-Analyst-Challenge/blob/29105d4813a96242e8921b618d4902e1430e9b6e/Dia%203%20-%20Configura%C3%A7%C3%A3o%20Elasticsearch/regrafirewall.png)
+
+
 
