@@ -17,6 +17,7 @@
 <img width="1380" height="831" alt="image" src="https://github.com/user-attachments/assets/1e16d78a-fc49-4536-abe9-713ab4ab46fd" />
 3. Clique em "Next"; Adicione essa integração na politica recém criada no Dia 9, que no meu caso a nomeei de Windows Policy.
 <img width="753" height="251" alt="image" src="https://github.com/user-attachments/assets/4b250434-11f4-45db-8465-ea231ea3190d" />
+
 4. Por fim, clique em "**Save and Deploy Changes**".
 
 
