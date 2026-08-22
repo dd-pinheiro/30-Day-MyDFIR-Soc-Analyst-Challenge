@@ -9,37 +9,30 @@
 
 ---
 
-## 🛠️ Passos Executados no Lab
+## Passo a passo a configuração:
+### 1) Adicionando Integração do Sysmon
+1. No homepage do Elastic, clique em "**Add Integrations**", logo em seguida, procure por *Custom Windows Event Logs*
+2. Preencha os campos **Integration Name** e **Description**. O campo "Channel Name" deve conter o nome do completo do Sysmon, para obter essa informação siga o passo a passo abaixo no Event Viewer do Windows:
+<img width="1323" height="792" alt="image" src="https://github.com/user-attachments/assets/de6ba3e1-a2fd-4402-b2cf-df8fbbc8667d" />
+<img width="1380" height="831" alt="image" src="https://github.com/user-attachments/assets/1e16d78a-fc49-4536-abe9-713ab4ab46fd" />
+3. Clique em "Next"; Adicione essa integração na politica recém criada no Dia 9, que no meu caso a nomeei de Windows Policy.
+<img width="753" height="251" alt="image" src="https://github.com/user-attachments/assets/4b250434-11f4-45db-8465-ea231ea3190d" />
+4. Por fim, clique em "**Save and Deploy Changes**".
 
-1. **Ajuste da Política no Fleet Server:**
-   * Acesso ao painel do Kibana em **Fleet > Agent Policies**.
-   * Edição da política aplicada ao endpoint Windows para adicionar uma nova integração voltada a logs do Windows (*Custom Windows Event Logs* ou a integração padrão de segurança do Windows/Sysmon).
 
-2. **Configuração dos Canais de Log:**
-   * Mapeamento do caminho correto do canal do Sysmon no Windows Event Viewer (`Microsoft-Windows-Sysmon/Operational`).
-   * Garantia de que a coleta estivesse ativa para capturar os principais Event IDs configurados anteriormente nos dias passados (como criações de processos e conexões de rede).
+ 
 
-3. **Validação da Ingestão no Kibana:**
-   * Acesso ao aplicativo **Discover** no Kibana.
-   * Filtragem por índices do Elastic Agent para verificar se os dados brutos (`event.dataset: "windows.sysmon_operational"` ou similar) já estavam sendo indexados e exibidos na timeline.
+### 2) Adicionando integração do Windows Defender
+1. Realize o mesmo processo feito em **Adicionando Integração do Sysmon**, porém customize a integração do Windows Defender para apenas capturar logs relacionadas aos *Event ID's 1116,1117* e *5001*
+2. Por fim, selecione a politica recém criada do Windows, e clique em "**Save and Deploy Changes**"
+
+### 3) Verificação das Logs
+Ao realizar o Passo 1 e 2, verifique se as logs já estão sendo geradas na aba "Discover" no Elasticsearch.
 
 ---
 
-## 🔍 Dicas e Resolução de Problemas
+## Dicas e Resolução de Problemas
 * **Atraso na Ingestão (Delay):** Se os logs não aparecerem imediatamente, verifique o status do Elastic Agent na máquina local (serviço rodando) e confira se há algum erro de permissão de leitura nos canais de eventos do Windows.
-* **Filtros de Índice:** Certifique-se de estar buscando pelo padrão de índice correto (`logs-*`) no Discover para não perder os dados recém-chegados.
+
 
 ---
-
-## ✅ Conquistas do Dia
-* [x] Política do Fleet atualizada para monitorar o canal operacional do Sysmon.
-* [x] Agente enviando dados do endpoint Windows com sucesso.
-* [x] Primeiros logs do Sysmon visualizados e validados dentro do Kibana (Discover).
-
----
-
-## 💡 Próximos Passos
-* Avançar para a criação de painéis (*Dashboards*) ou investigação de alertas baseados nesses novos logs que estão chegando ao SIEM.
-
----
-[⬅️ Voltar para o Índice](../README.md)
