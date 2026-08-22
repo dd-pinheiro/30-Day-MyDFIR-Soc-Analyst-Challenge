@@ -7,7 +7,7 @@ Compreender o conceito de **ataques de força bruta (Brute Force Attacks)**, exp
 
 ---
 
-## 🔐 O que é um Ataque de Força Bruta?
+## O que é um Ataque de Força Bruta?
 Um ataque de força bruta (Brute-Force Attack) é um tipo de ataque onde o adversário usa todo tipo de combinação de senha com o intuito de comprometer a conta de um usuário. Existem variações deste ataque, no entanto entraremos em detalhes de apenas três delas.
 
 ### Brute Force Attack
@@ -21,14 +21,14 @@ Isso é onde o atacante obtém uma lista de vazamento de dados e tenta todo tipo
 
 ---
 
-##  🎭 Ferramentas Ofensivas Comuns
+##  Ferramentas Ofensivas Comuns
 Existem diversos tipos de ferramentas para realizar ataques de força bruta, abaixo citaremos três das mais utilizadas:
 
 | Ferramenta | Descrição / Função Principal |
 | :--- | :--- |
 | **Hydra** | Ferramenta rápida e versátil para quebra de senhas via rede, suportando múltiplos protocolos (SSH, FTP, RDP, HTTP, etc.). |
 | **Hashcat** | Uma das ferramentas de recuperação de hash e senhas mais rápidas e avançadas do mercado. |
-| **John the Ripper** | Utilitário clássico de auditoria e quebra de senhas offline, altamente flexível. |
+| **John the Ripper** | Muito utilizado no pentesting empresarial e quebra de senhas offline |
 
 ---
 
