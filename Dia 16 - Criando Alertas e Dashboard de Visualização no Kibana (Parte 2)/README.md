@@ -33,6 +33,12 @@ Realize os mesmo passos feito em **2)**, porém tenha em mente que será monitor
 
 ---
 
+## Resultado
+No final, duas regras devem ser criadas para serem monitoradas através do SIEM:
+<img width="1186" height="91" alt="image" src="https://github.com/user-attachments/assets/cbf36623-d043-4e41-820f-0edc86ec37cd" />
+
+---
+
 ## Consultas e Filtros Úteis (KQL)
 Durante a configuração no Discover e nas regras de SIEM, foram utilizados filtros como:
 
