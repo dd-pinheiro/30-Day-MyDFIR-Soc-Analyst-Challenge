@@ -36,5 +36,10 @@ Durante a criação e validação das regras de detecção, foram aplicados filt
 
 Vale ressaltar que campo `agent.name` varia de acordo com o hostname de seu servidor.
 
+---
+
+## Lições Aprendidas
+- Como configurar regras no Kibana
+- Criação de mapas e Dashboards
 
   
