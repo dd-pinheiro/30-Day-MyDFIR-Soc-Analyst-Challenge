@@ -39,7 +39,7 @@ Vale ressaltar que campo `agent.name` varia de acordo com o hostname de seu serv
 ---
 
 ## Lições Aprendidas
-- Como configurar regras no Kibana
+- Criando regras de threshold no Kibana
 - Criação de mapas e Dashboards
 
   
