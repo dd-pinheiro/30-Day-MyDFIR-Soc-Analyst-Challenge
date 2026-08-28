@@ -29,7 +29,11 @@ Prossiga clicando em "Continue".
 6. Por fim clique em "**Create & enable rule**""
 
 ### 3) Criando regra de brute force RDP via SIEM
-Realize os mesmo passos feito em **2)**, porém tenha em mente que será monitorado atividades RDP, ou seja, outra Query KQL será utilizada.
+Realize os mesmo passos feito em **2)**, porém tenha em mente que será monitorado atividades RDP, ou seja, outra Query KQL será utilizada:
+```
+    event.code: 4625 and agent.name: "BobServer" and user.name: "Administrator"
+```
+Note que essa regra especifica o Event ID 4625 (Falha de autenticação via RDP) no servidor BobServer utilizando o usuário *Administrator*. Ou seja, essa regra irá gerar um alerta sempre que esses três critérios forem "ativados"; caso contrário, não irá gerar um alerta.
 
 ---
 
@@ -45,3 +49,9 @@ Durante a configuração no Discover e nas regras de SIEM, foram utilizados filt
 * **Filtrar tentativas de login falhas no Windows (Event ID 4625):**
   ```kql
   agent.name: "<NOME_DO_AGENT_WINDOWS>" AND event.code: "4625"
+
+---
+
+## 💡 Lições Aprendidas
+- Criação de Regras via SIEM
+- Pesquisa avançada de Query, envolvendo hosts especificos e atividades especificas.
