@@ -16,10 +16,7 @@ Foi utilizado o provedor Vultr para hospedar o Fleet Server.
 * **Distribuição:** Ubuntu 22.04 LTS
 * **Especificações:** 4GB RAM / 1 vCPUs
 * **VPC**: Não se aplica
-* **Firewall Group**: Adicione a seguinte regra de firewall em seu servidor:
-
-<img width="1064" height="76" alt="image" src="https://github.com/user-attachments/assets/e0e90b29-0ccd-49f4-8195-41ea8a3e8751" />
-Essa regra fará com que o servidor do Elastic&Kibana (configurado no dia 3) tenha comunicação com o nosso *Fleet Server*.
+* **Firewall Group**: Não se aplica. 
 
 ---
 
