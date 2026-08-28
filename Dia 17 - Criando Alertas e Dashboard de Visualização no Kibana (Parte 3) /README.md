@@ -10,7 +10,7 @@ Neste dia, você aprenderá a criar um Dashboard que mostrará as atividades RDP
 
 ## Atividades Práticas realizadas
 ### 1) Criação de Dashboard para atividades RDP
-Da mesma forma que foi criado um Mapa no dia 14 para eventos relacionados ao SSH, você criará outro Mapa; porém neste mapa deve detalhar apenas atividades RDP (Falhas e Autenticações bem sucedidas).
+Da mesma forma que foi criado um Mapa no **Dia 14** para eventos relacionados ao SSH, você criará outro Mapa; porém neste mapa deve detalhar apenas atividades RDP (Falhas e Autenticações bem sucedidas).
 1. Vá até a aba "Maps" > pesquise pela *Query* `event.code: 4625 and agent.name: BobServer` > Add Layer > Selecione o modelo *Choropleth* e adicione em um dashboard existente.
 2. Faça o mesmo processo que no mapa acima, porém que a *Query* pela seguinte: `event.code: 4624 and (winlog.event_data.LogonType: 10 or winlog.event_data.LogonType: 7)`
 3. Recomendo que deixe os dois mapas lado a lado para uma melhor comparação:
@@ -35,7 +35,7 @@ Nesta parte, logo abaixo de cada um desses Mapas, foi criada uma tabela para obt
 
 ---
 
-## Lições Aprendidas
+## 💡 Lições Aprendidas
 - Criação de regras threshold para atividades RDP no Kibana
 - Como criar Tabelas de visualização e personalizá-las de acordo com a sua necessidade
 
