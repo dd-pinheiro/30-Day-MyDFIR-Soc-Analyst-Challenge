@@ -9,7 +9,7 @@ Configurar regras de alerta e estruturar visualizações em dashboards no **Kiba
 
 ## Atividades Práticas Realizadas
 ### 1) **Identificação de Padrões no Kibana Discover:**
-1. Acesse a interface do Kibana e navegação até a seção **Discover** e utilizando a seguinte query para pesquisa no KQL:
+1. Acesse a interface do Kibana e navegue até a seção **Discover**. No campo de pesquisa, insira a seguitne Query utilizando a linguagem KQL:
 `system.auth.ssh.event : * and agent.name: myDFIR-Ubuntu-SSH-Server and system.auth.ssh.event: Failed` 
 2. Logo em seguida, selecione os campos que informam aspectos relevantes para melhor analise diante de uma tentativa de brute force, tais como `host.ip`, `message`, `user.name` e `source.ip`.
 3. Após pesquisar a query e selecionar os campos necessários, crie um Alerta, clicando em "**Alerts**" > "**Create search threshold rule**"; siga o modelo abaixo para mais informações:
@@ -38,7 +38,8 @@ Vale ressaltar que campo `agent.name` varia de acordo com o hostname de seu serv
 
 ---
 
-## Lições Aprendidas
+## 💡 Lições Aprendidas
+- Pesquisa de query utilizando a linguagem KQL
 - Criando regras de threshold no Kibana
 - Criação de mapas e Dashboards
 
