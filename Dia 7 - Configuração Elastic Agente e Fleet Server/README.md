@@ -39,7 +39,6 @@ Por fim, realizei a conexão SSH no servidor, e segui o passo a passo para insta
 
 Durante a conexão do agente com o servidor Fleet, você irá se deparar com problemas de rede. Os principais pontos de atenção mapeados hoje foram:
 * **Portas de Comunicação:** Certificar-se de que as portas essenciais (como a **8220** para o Fleet Server e **443/9200**) estão devidamente abertas.
-* **Firewalls e Regras de Subrede:** Validação de regras de firewall tanto no provedor de nuvem (ex: Vultr/Oracle Cloud) quanto nas configurações locais do sistema operacional, é recomendado que habilite as portas **8220,443 e 9200** utilizando `ufw allow` no Ubuntu.
 
 > **Lição Aprendida:** Verifique os padrões de configuração de firewall endpoint (`iptables`/`ufw`) ao diagnosticar falhas de comunicação entre as aplicações.
 
