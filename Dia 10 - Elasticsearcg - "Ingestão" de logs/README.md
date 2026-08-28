@@ -21,11 +21,9 @@
 4. Por fim, clique em "**Save and Deploy Changes**".
 
 
- 
-
 ### 2) Adicionando integração do Windows Defender
 1. Realize o mesmo processo feito em **Adicionando Integração do Sysmon**, porém customize a integração do Windows Defender para apenas capturar logs relacionadas aos *Event ID's 1116,1117* e *5001*
-2. Por fim, selecione a politica recém criada do Windows, e clique em "**Save and Deploy Changes**"
+2. Por fim, selecione a política recém criada do Windows, e clique em "**Save and Deploy Changes**"
 
 ### 3) Verificação das Logs
 Ao realizar o Passo 1 e 2, verifique se as logs já estão sendo geradas na aba "Discover" no Elasticsearch.
@@ -37,3 +35,7 @@ Ao realizar o Passo 1 e 2, verifique se as logs já estão sendo geradas na aba 
 
 
 ---
+
+## 💡 Lições Aprendidas e Desafios
+- Adicionando integração do Sysmon e Windows Defender no Fleet Server
+- Gerenciamento de políticas
