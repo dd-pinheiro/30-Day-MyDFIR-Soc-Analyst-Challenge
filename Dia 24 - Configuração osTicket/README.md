@@ -13,7 +13,7 @@ No dia 25, iremos realizar a integração do **osTicket** com o **Elasticsearch*
 * **VPC**: Deve estar na mesma Rede Local virtual do servidor que hospeda o **Elastic & Kibana**.
 * **Configurações Iniciais:**
     - Acesso via RDP com senha
-    -Necessário colocar o servidor no mesmo grupo de Firewall do *Vultr*, para somente permitir conexões RDP e HTTP/HTTPS com o meu IP público.
+    - Necessário colocar o servidor no mesmo grupo de Firewall do *Vultr*, para somente permitir conexões RDP e HTTP/HTTPS com o meu IP público (*allow list*).
 
 ---
 
@@ -62,3 +62,11 @@ Vale ressaltar que essa URL pode ser acessada apenas por mim, visto que foi conf
 Vale ressaltar que essas informações demarcadas devem estar em sincronia com as informações preenchidas no painel *phpmyadmin*, caso contrário, você não conseguirá realizar a configuração do osTicket.
 4. Por fim, foi alterei a permissão do arquivo de configuração e acessei as URL do painel principal do Sistema de Tickets.
 <img width="1020" height="372" alt="image" src="https://github.com/user-attachments/assets/33021363-64e2-468d-945f-36fad78f89fd" />
+
+---
+
+## 💡 Lições Aprendidas e Desafios
+- Instalação e configuração do XAMPP
+- Configuração do painel phpmyadmin via web / mudança nos arquivos de configurações
+- Criação do banco de dados
+- Criação de regra no Firewall do Windows para conexões de entrada.
