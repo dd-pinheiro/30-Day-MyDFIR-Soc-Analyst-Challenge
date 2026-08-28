@@ -7,13 +7,15 @@ Criar nosso servidor que servirá como *Command & Control* e também configurar 
 
 
 ## ☁️ Infraestrutura de Servidor
-Utilizei o provedor Vultr para hospedar o SIEM.
+Novamente, vale ressaltar que todos os servidores deste repositório estão sendo criados através do Vultr[https://www.vultr.com/]
 
 * **Distribuição:** Ubuntu 22.04 LTS
 * **Especificações:** 4GB RAM / 2 vCPUs
-* **VPC**: Criada regra de Firewall para permitir conexões em todas as portas TCP apenas com meu IP público. Crie uma regra de firewall na nuvem para permitir conexões TCP apenas com seu IP público; com isso será possível acessar a interface gráfica do Mythic sem precisar estar na mesma rede local.
+* **VPC**: Criado um novo grupo de firewall, com uma regra de Firewall permitindo conexões em todas as portas TCP vindas apenas de meu IP público. Com isso, será possível acessar a interface gráfica do Mythic sem precisar estar na mesma rede local.
+
 * **Configurações Iniciais:**
     Não se Aplica
+
 ---
 
 ## 📝 Passo a Passo Realizado
@@ -29,10 +31,10 @@ Vale ressaltar que essas configurações foram feitas no servidor recém criado.
 Após finalizar a instalação do Mythic em seu servidor, vá até seu provedor de nuvem e crie um novo Grupo de Firewall; adicione esse grupo de Firewall em seu servidor do Mythic e crie uma regra similar a está:
 <img width="907" height="102" alt="image" src="https://github.com/user-attachments/assets/beaec7c2-e416-48b3-8197-b8eff78bbd8e" />
 
-Vale ressaltar que essa regra permitirá conexões em todas as portas apenas de seu IP público. O motivo pelo qual fiz isso é porque utilizaremos o Mythic pelo navegador usando o protocolo HTTP, ou seja, apenas o meu IP público conseguirá interagir com o Mythic por conta desta regra de firewall.
+Vale ressaltar que essa regra permitirá conexões em todas as portas apenas de seu IP público. O motivo pelo qual fiz isso é porque utilizaremos o Mythic pelo navegador usando o protocolo HTTP, ou seja, apenas o meu IP público conseguirá interagir com o Mythic por conta desta regra de firewall de rede.
 
 ### 3) Utilizando o Mythic
-1. Para acessar a interface gráfica do Mythic pelo navegador, utilize a URL http://[ip público do servidor do mythic]:7443.
+1. Para acessar a interface gráfica do Mythic pelo navegador, utilize a URL *http://[ip público do servidor do mythic]:7443*.
 <img width="785" height="674" alt="image" src="https://github.com/user-attachments/assets/d69b2cc5-b28c-41e7-8b04-881912bf5a99" />
 
 Por padrão o mythic é configurado para se comunicar através da porta 7443, mas você pode alterar isso no arquivo de configuração.
