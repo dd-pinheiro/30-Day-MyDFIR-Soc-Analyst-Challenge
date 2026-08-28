@@ -10,7 +10,7 @@
 ---
 
 ## Passo a Passo para instalação
-Os passos citados abaixo, devem ser feitos em sua máquina Windows Server 2022 que foi configurada no dia 5 deste desafio.
+Os passos citados abaixo, devem ser feitos em sua máquina Windows Server 2022 que foi configurada no **Dia 5** deste desafio.
 
 ### 1) **Obtenção das Ferramentas:**
    * Baixe a ferramenta do **Sysmon** diretamente do site oficial da Microsoft (Sysinternals).
@@ -25,12 +25,16 @@ Os passos citados abaixo, devem ser feitos em sua máquina Windows Server 2022 q
 
 ### 3) **Validação do Funcionamento:**
    * Confirme a existênca do serviço Sysmon nos Serviços do Windows (`Services.msc`).
-   * Faça a verificação inicial das logs geradas pelo Sysmon no **Event Viewer** (`Applications and Services Logs > Microsoft > Windows > Sysmon > Operational`).
+   * Faça a verificação inicial das logs geradas pelo Sysmon no **Event Viewer**, seguindo o caminho: `Applications and Services Logs > Microsoft > Windows > Sysmon > Operational`.
 
 ---
 
 ## ⚠️ Atenção!
-* **Importância de uma boa Configuração (XML):** Instalar o Sysmon sem um arquivo de configuração personalizado (usando apenas as configurações padrão) pode gerar um volume desnecessário de logs.
+* **Importância de uma boa Configuração (XML):** Instalar o Sysmon sem um arquivo de configuração personalizado (usando apenas as configurações padrão) pode gerar uma quantidade massiva de logs.
 * Utilize um arquivo de configuração sysmon confiável.
 
 ---
+
+## 💡 Lições Aprendidas e Desafios
+- Instalação do Sysmon no Windows
+- Importação de um arquivo de configuração para o Sysmon.
