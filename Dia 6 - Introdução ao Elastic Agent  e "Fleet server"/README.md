@@ -14,7 +14,11 @@
    * **Elastic Agent:** Um único agente que gerencia múltiplas integrações (segurança, métricas, logs) e é controlado de forma centralizada através de um Fleet Server (Servidor da frota)
 
 2. **Fleet Server:**
-   * Um **Fleet Server** ou Servidor da Frota em português, é um componente que conecta diversos agentes a uma "Frota"
+   * Um **Fleet Server** ou Servidor da Frota em português, é um componente que conecta diversos agentes a uma "Frota". Ele suporta diversas conexões de Agentes, seja Elastic Agents ou *Beats*;
    * Permite atualizar políticas de segurança, adicionar novas integrações de logs e gerenciar dezenas de endpoints diretamente pela interface do Kibana sem precisar acessar cada máquina individualmente.
 
 ---
+
+## 💡 Lições Aprendidas e Desafios
+- Qual a diferença entre *Beats* e *Elastic Agente*
+- O que é um Fleet Server e qual o propósito dele em uma infrastrutura
