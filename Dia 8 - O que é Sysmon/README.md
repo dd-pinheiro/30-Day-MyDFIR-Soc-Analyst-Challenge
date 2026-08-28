@@ -11,7 +11,6 @@
 
 ## Conceitos Chave Explorados
 ### O que é o Sysmon?
-   * O Sysmon é uma ferramenta gratuita da microsoft que faz parte do suite sysinternal e disponibiliza vários tipos de telemetria, o que aumenta a chance de você capturar atividades suspeita.
    * É um serviço de sistema do Windows e um driver de dispositivo que permanece residente na máquina (faz parte do conjunto de ferramenta sysinternals do Windows), monitorando e registrando a atividade do sistema nas logs de eventos do Windows.
    * Ele oferece informações detalhadas sobre criações de processos, conexões de rede e alterações em arquivos/chaves de registro.
 
@@ -28,7 +27,11 @@
 
 ---
 
-## ⚠️ Pontos de Atenção (Desafios com Telemetria)
+## ⚠️ Atenção
 * **Volume de Dados e Ruído:** O Sysmon gera uma quantidade massiva de logs. Sem uma configuração adequada, irá mais prejudicar o ambiente de monitoração do que ajudar.
 
 ---
+
+## 💡 Lições Aprendidas
+- O que é o Sysmon, e porque ele é essencial para um ambiente de **Security Operations Center (SOC)**
+- Principais event ID's de segurança.
