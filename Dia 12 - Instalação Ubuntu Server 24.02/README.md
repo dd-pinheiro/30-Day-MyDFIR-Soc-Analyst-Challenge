@@ -16,7 +16,7 @@ Utilizei o provedor Vultr para hospedar o SIEM.
 
 ---
 
-## Atividades Práticas Realizadas.
+## Atividades Práticas Realizadas:
 
 1. **Observação de Tráfego Real (Exposição a Bots):**
    * Ao expor a porta SSH diretamente na internet, a máquina se torna um alvo instantâneo para bots automatizados que buscam por portas administrativas abertas globalmente.
