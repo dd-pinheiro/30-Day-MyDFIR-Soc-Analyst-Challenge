@@ -14,7 +14,7 @@ O ELK Stack é uma plataforma centralizada de gerenciamento de logs e análise d
 2. **Logstash:** 
    - Coleta dados de várias fontes, filtra, transforma e os envia limpos para o Elasticsearch.
 3. **Kibana:** 
-   - A interface web de visualização e exploração de dados.
+   - A interface web de visualização e exploração de dados dentro do Elasticsearch.
    - Permite criar dashboards, painéis de monitoramento, investigações via console e triggers de alerta.
 
 ## 📋 Aprendizado:
@@ -23,3 +23,7 @@ O ELK Stack é uma plataforma centralizada de gerenciamento de logs e análise d
 * **Sysmon (System Monitor):** Ferramenta essencial da Microsoft Sysinternals para capturar telemetria avançada de eventos no Windows (criação de processos, conexões de rede, alterações no registro).
 
 ---
+
+## 💡 Lições Aprendidas e Desafios
+- O que é, e como funciona o ELK Stack
+- Quais tipos de agente uma ferramenta SIEM pode utilizar
