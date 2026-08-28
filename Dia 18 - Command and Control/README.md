@@ -23,6 +23,7 @@ Qualquer que seja o objetivo, o atacante deve ter acesso ao ambiente para perfor
 ---
 ## Ferramentas/Frameworks comuns utilizados para Command & Control
 Existem diversas ferramentas e frameworks usados para Comamnd & Control, mas neste video foi explicado as quatro mais utilizadas no mercado, sendo elas:
+
 ### Metasploit
 Uma ferramenta open-source amplamente usada em cenários de *pentesting* e exploração de vulnerabilidades. Ela é utilizada para obtenção de informações, verificação de vulnerabilidades, pós exploração e melhoras na defesa.
 
@@ -38,7 +39,7 @@ Esse será o framework que usaremos para esse desafio. Esse framework foi constr
 
 ---
 
-## Lições Aprendidas
+## 💡 Lições Aprendidas
 - O que é Command & Control
 - Porque Command & Control é importante para um atacante
 - Quais são as ferramentas/frameworks utilizados
