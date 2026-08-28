@@ -19,22 +19,22 @@ Foi utilizado o provedor Vultr para hospedar o Fleet Server.
 * **Firewall Group**: Adicione a seguinte regra de firewall em seu servidor:
 
 <img width="1064" height="76" alt="image" src="https://github.com/user-attachments/assets/e0e90b29-0ccd-49f4-8195-41ea8a3e8751" />
-Essa regra fará com que os servidores do Elastic&Kibana (configurado no dia 3) e osTicket (Servidor de tickets) se comuniquem com o servidor da frota, para que assim seja possível com que o Servidor da Frota se comunique com o Elasticsearch para gerar logs.
+Essa regra fará com que o servidor do Elastic&Kibana (configurado no dia 3) tenha comunicação com o nosso *Fleet Server*.
 
 ---
 
-## Passos a passo
+## Passos a passo realizado
 
 ### 1) **Configuração Fleet Server na Interface Web do Elastic Search**
-  1. Vá até a sua Interface Web do Elastic Search, procure pela aba "**Management**" e logo em seguida clique em "**Fleet**"
-  2. Clique em "**Add Fleet Server**" > **Quick Start**; preencha o os campos Name e URL (`http://[ip público do seu servidor]:[Porta utilizada]`); prossiga clicando em "**Generate Fleet Server Policy**". De forma análoga, siga o exemplo da imagem abaixo:
+  1. No Kibana, para adicionar o *Fleet Server*, fui até a aba "**Management**" > "**Fleet**"
+  2. Para começar a configuração do novo servidor, fui até "**Add Fleet Server**" > **Quick Start**; preenchi o os campos **Name** e **URL** (`http://[ip público do seu servidor]:[Porta utilizada]`); logo após preencher os campos, gerei uma nova politica de *Fleet Server* em "**Generate Fleet Server Policy**".
 <img width="1152" height="169" alt="image" src="https://github.com/user-attachments/assets/d7cf26a8-f690-4a39-bd30-7d296bd6dd2d" />
-Por fim, realize a conexão SSH em seu servidor Fleet Server, e siga o passo a passo para instalação do Fleet Server. Caso tenha seguido o passo a passo da forma correta, você receberá uma notificação na Interface Web do Elastic informando que o Fleet Server foi conectado.
+Por fim, realizei a conexão SSH no servidor, e segui o passo a passo para instalação do Fleet Server.
 
 
 ### 2) **Instalação do Elastic Agent:**
-  1. Após a conclusão do **Passo 1**, prossiga clicando em "**Continue enrolling Elastic Agent**" > Insira o nome da sua Politica e clique em "Create Policy"
-  2. Selecione o método de instalação do Windows Elastic Agent e siga o passo a passo. Vale ressaltar que o script de instalação deve ser executado no PowerShell como Administrador.
+  1. Após a conclusão do **Passo 1**, prossegui com a instalação do agente em "**Continue enrolling Elastic Agent**".
+  2. Após criar minha politica, foi necessário realizar a instalação do Elastic Agente em nossa máquina Windows Server 2022; para isso, segui o passo a passo informado no Kibana. Vale ressaltar que o script de instalação deve ser executado no PowerShell como Administrador.
 
 ---
 
