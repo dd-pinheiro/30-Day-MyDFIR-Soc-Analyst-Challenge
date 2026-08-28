@@ -25,6 +25,11 @@ Os outros três servidores que compõem a infraestrutura devem ficar fora da Red
 ##### Nota 📝
 Vale ressaltar que os servidores estão dentro do Provedor Vultr, que nos possibilita de criar máquinas virtuais.
 
+---
+
+## Lições Aprendidas e Desafios
+- Criação de diagrama de visualização de um infraestrutura.
+
 
 
 
