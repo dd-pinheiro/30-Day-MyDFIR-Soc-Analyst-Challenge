@@ -3,7 +3,7 @@
 ---
 
 ## 🎯 Objetivo do Dia
-O objetivo deste dia é investigar um alerta de força bruta via SSH no painel de SIEM do Elastic Security. Essa investigação envolve a triagem do alerta, a determinação da natureza maliciosa do IP de origem, a identificação das contas de usuário alvo, a verificação de eventuais tentativas de autenticação bem-sucedidas e a documentação ou resolução adequada do alerta utilizando osTicket.
+O objetivo deste dia é investigar alertas de ataque de força bruta via SSH no painel de SIEM do Elastic Security. Essa investigação envolve a triagem do alerta, a determinação da natureza maliciosa do IP de origem; a identificação das contas de usuário alvo; a verificação de eventuais tentativas de autenticação bem-sucedidas e a documentação ou resolução adequada do alerta utilizando osTicket.
 
 ---
 
