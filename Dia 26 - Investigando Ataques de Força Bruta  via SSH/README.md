@@ -3,7 +3,7 @@
 ---
 
 ## 🎯 Objetivo do Dia
-O objetivo do Dia 26 é investigar um alerta de força bruta via SSH no painel de SIEM do Elastic Security. Essa investigação envolve a triagem do alerta, a determinação da natureza maliciosa do IP de origem, a identificação das contas de usuário alvo, a verificação de eventuais tentativas de autenticação bem-sucedidas e a documentação ou resolução adequada do alerta utilizando osTicket.
+O objetivo deste dia é investigar um alerta de força bruta via SSH no painel de SIEM do Elastic Security. Essa investigação envolve a triagem do alerta, a determinação da natureza maliciosa do IP de origem, a identificação das contas de usuário alvo, a verificação de eventuais tentativas de autenticação bem-sucedidas e a documentação ou resolução adequada do alerta utilizando osTicket.
 
 ---
 
@@ -84,6 +84,9 @@ Abaixo, segue mais uma captura de tela de todos os tickets que foram gerados em 
 
 Esse volume abundante de ticket é feito propositalmente, afinal estamos em um ambiente de testes e o propósito dele é aprender como um sistema de Tratamento de Tickets e resposta a incidentes funciona.
 Além disso, vale ressaltar, que antes de começar a tratativa de um ticket, sempre dê um "Assign" e o coloque em seu nome, assim você evitará que outra pessoa comece a tratar o mesmo ticket que você está tratando.
+
+Na captura de tela abaixo, demonstro com o seria feita a resolução de um desses tickets.
+<img width="711" height="702" alt="image" src="https://github.com/user-attachments/assets/2db4a844-f973-4f5e-9bc0-fda33c2e5eb9" />
 
 ---
 
