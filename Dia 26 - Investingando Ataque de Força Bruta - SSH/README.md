@@ -9,7 +9,7 @@ O objetivo do Dia 26 é investigar um alerta de força bruta via SSH no painel d
 
 ## Investigação
 Para começar a investigação de seus alertas, vá até a aba "**Security**" e selecione "**Alerts**".
-<<img width="1411" height="756" alt="image" src="https://github.com/user-attachments/assets/7c0d20b1-ddc7-4652-9d0e-33a7fba7d365" />
+<img width="1411" height="756" alt="image" src="https://github.com/user-attachments/assets/7c0d20b1-ddc7-4652-9d0e-33a7fba7d365" />
 
 Neste caso, como nosso objetivo principal é investigar alertas de Ataque de Brute-force via SSH, devemos sempre nos questionarmos sobre o que será analisado primeiramente. Abaixo, segue alguns pontos importantes para serem observados ao analisar este tipo de alerta:
 - Analise o IP de origem - Ele é conhecido como malicioso?
