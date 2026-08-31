@@ -71,7 +71,10 @@ Nessa parte, iremos fazer com que nossos alertas gerem tickets no osTicket.
 ```
 Os campos que estão com chaves; por exemplo `{{rule.name}}`, são variáveis que puxam informações especificas dependendo da regra. Para obter mais informações sobre essas variáveis, visite a documentação oficial do Elasticsearch em [https://www.elastic.co/docs/explore-analyze/alerting/alerts/rule-action-variables] 
 
-A variável `{{rule.url}}` é um link que leva o Analista que irá analisar o ticket direto para o Alerta que gerou esse ticket, dessa forma ficará mais fácil de analisar o que causou gerou o ticket sem precisar procurar manualmente na aba Alertas do SIEM.
+A variável `{{rule.url}}` é um link que leva o Técnico/analista que irá analisar o ticket direto para o Alerta que gerou esse ticket, dessa forma facilita ainda mais o processo de triagem do Incidente.
+
+<img width="530" height="677" alt="image" src="https://github.com/user-attachments/assets/b21bef4f-935a-421b-9972-d5f087027717" />
+
 
 ---
 
