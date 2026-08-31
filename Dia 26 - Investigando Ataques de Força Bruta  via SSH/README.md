@@ -69,6 +69,9 @@ Nessa parte, iremos fazer com que nossos alertas gerem tickets no osTicket.
     {{rule.url}}]]></message>
 </ticket>
 ```
+
+<img width="1246" height="717" alt="image" src="https://github.com/user-attachments/assets/17f14305-87c3-48a8-9a67-ea6b48db2ac2" />
+
 Os campos que estão com chaves; por exemplo `{{rule.name}}`, são variáveis que puxam informações especificas dependendo da regra. Para obter mais informações sobre essas variáveis, visite a documentação oficial do Elasticsearch em [https://www.elastic.co/docs/explore-analyze/alerting/alerts/rule-action-variables] 
 
 A variável `{{rule.url}}` é um link que leva o Técnico/analista que irá analisar o ticket direto para o Alerta que gerou esse ticket, dessa forma facilita ainda mais o processo de triagem do Incidente.
@@ -88,7 +91,7 @@ Abaixo, segue mais uma captura de tela de todos os tickets que foram gerados em 
 Esse volume abundante de ticket é feito propositalmente, afinal estamos em um ambiente de testes e o propósito dele é aprender como um sistema de Tratamento de Tickets e resposta a incidentes funciona.
 Além disso, vale ressaltar, que antes de começar a tratativa de um ticket, sempre dê um "Assign" e o coloque em seu nome, assim você evitará que outra pessoa comece a tratar o mesmo ticket que você está tratando.
 
-Na captura de tela abaixo, demonstro com o seria feita a resolução de um desses tickets.
+Na captura de tela abaixo, há uma pequena demonstração de como deve ser feito o encerramento de um ticket de Brute-Force via SSH:
 <img width="711" height="702" alt="image" src="https://github.com/user-attachments/assets/2db4a844-f973-4f5e-9bc0-fda33c2e5eb9" />
 
 ---
