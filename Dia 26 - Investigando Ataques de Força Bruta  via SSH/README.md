@@ -76,22 +76,26 @@ Os campos que estão com chaves; por exemplo `{{rule.name}}`, são variáveis qu
 
 A variável `{{rule.url}}` é um link que leva o Técnico/analista que irá analisar o ticket direto para o Alerta que gerou esse ticket, dessa forma facilita ainda mais o processo de triagem do Incidente.
 
-<img width="530" height="677" alt="image" src="https://github.com/user-attachments/assets/b21bef4f-935a-421b-9972-d5f087027717" />
+<img width="552" height="726" alt="image" src="https://github.com/user-attachments/assets/3c3ef423-1ffd-47be-a1c9-0d9c5803a12d" />
+
 
 
 ---
 
 ## 📷 Capturas de Tela:
 Abaixo, segue a captura de tela de um dos tickets que foram gerados por conta do Alerta que foi configurado:
+
 <img width="931" height="758" alt="image" src="https://github.com/user-attachments/assets/4261fb18-4759-4427-b2e7-bb238118415b" />
 
 Abaixo, segue mais uma captura de tela de todos os tickets que foram gerados em relação aos Alertas de Brute-Force SSH:
+
 <img width="931" height="758" alt="image" src="https://github.com/user-attachments/assets/3b06fa22-df44-4689-af13-33ad8b108d53" />
 
 Esse volume abundante de ticket é feito propositalmente, afinal estamos em um ambiente de testes e o propósito dele é aprender como um sistema de Tratamento de Tickets e resposta a incidentes funciona.
 Além disso, vale ressaltar, que antes de começar a tratativa de um ticket, sempre dê um "Assign" e o coloque em seu nome, assim você evitará que outra pessoa comece a tratar o mesmo ticket que você está tratando.
 
 Na captura de tela abaixo, há uma pequena demonstração de como deve ser feito o encerramento de um ticket de Brute-Force via SSH:
+
 <img width="711" height="702" alt="image" src="https://github.com/user-attachments/assets/2db4a844-f973-4f5e-9bc0-fda33c2e5eb9" />
 
 ---
