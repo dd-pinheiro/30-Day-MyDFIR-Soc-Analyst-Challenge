@@ -15,7 +15,7 @@ Antes de começar, vale ressaltar alguns pontos:
 Vale ressaltar que nesse laboratório, nomeei o payload de `payload.exe`.
 
 
-Mas fica aqui um questionamento, ***como posso investigar de uma forma mais detalhadas as atividades do Mythic?*** Respondendo a esta pergunta, existem varias formas de fazer isso, mas a principal é através de Telemetria de redes (Network Telemetry) e Investigação de Criação de Processos (Event ID 1); abaixo descreverei brevemente cada um desses dois:
+Mas fica aqui um questionamento, ***Como posso investigar de uma forma mais detalhadas as atividades do Mythic?*** A forma mais comum é através de Telemetria de redes (Network Telemetry) e Investigação de Criação de Processos (Event ID 1); abaixo descreverei brevemente cada um desses dois:
 
 #### Network Telemetry
 Normalmente, quando existe alguma sessão ativa de **Command & Control** em um computador, acaba gerando muito tráfico de *Inbound* e *Outbound*, o que significa que múltiplos *bytes* estão sendo transmitidos entre o Servidor de Command & Control e a máquina alvo. O resultado disso é diversas logs sendo geradas de comunicação entre esses dois hosts.
