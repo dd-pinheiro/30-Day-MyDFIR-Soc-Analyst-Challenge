@@ -88,5 +88,9 @@ Em um cenário real, eu poderia muito bem utilizar a URL do corpo do Ticket para
 
 ---
 
+# 💡 Lições Aprendidas
+- Comandos executados diretamente no através da sessão de C2 rodam apenas na memória do computador, evitando criação de processos. Por isso ao analisar logs de atividades suspeitas, é importante analisar a Telemetria de Rede (IP de destino, IP de origem e portas)
+- Realizar pesquisar utilizando os campos `ParentProcessGUID` e `ParentProcessID` permite isolar todas as ações geradas a partir do processo pai, nesse caso o Apollo.exe
+- Integrar o SIEM diretamente a uma plataforma de ticketing como o osTicker garante um melhor tempo de reação para o time de SOC.
 
 
