@@ -1,8 +1,4 @@
 # 🛡️ 30-Day SOC Analyst Challenge (MyDFIR) - Hands-on Lab 
----
-
-## ‼️Créditos
-Antes de começar, vale ressaltar que não fiz esse processo totalmente sozinho, mas sim, segui o *walkthrough* do Canal **MyDFIR** apresentando pelo Steven. Recomendo bastante o canal para quem deseja aprender mais sobre como funciona o segmento de Segurança Defensiva e também deseja adquirir conhecimentos práticos. No canal, tem uma playlist explicando todo o processo que documentei neste repositório de forma detalhada. A seguir, coloquei o link da playlist para quem quiser acompanhar e repetir o processo: https://www.youtube.com/playlist?list=PLG6KGSNK4PuBb0OjyDIdACZnb8AoNBeq6
 
 ---
 
@@ -24,5 +20,8 @@ Este repositório documenta a implementação prática de um ambiente de **Secur
 <img width="567" height="658" alt="image" src="https://github.com/user-attachments/assets/d9f80bfd-a775-4f6c-8518-a703a1369f0d" />
 
 ---
+
+## ‼️Créditos
+Vale ressaltar que não fiz esse fiz esse projeto totalmente sozinho, mas sim, segui o *walkthrough* do Canal **MyDFIR** apresentando pelo Steven. Recomendo bastante o canal para quem deseja aprender mais sobre como funciona o segmento de Segurança Defensiva e também deseja adquirir conhecimentos práticos. No canal, tem uma playlist explicando todo o processo que documentei neste repositório de forma detalhada. Por fim, segue o link para quem quiser acompanhar e construir o mesmo laboratório em casa: [https://www.youtube.com/playlist?list=PLG6KGSNK4PuBb0OjyDIdACZnb8AoNBeq6]
 
 
