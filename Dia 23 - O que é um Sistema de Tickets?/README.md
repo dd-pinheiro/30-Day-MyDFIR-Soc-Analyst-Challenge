@@ -22,7 +22,7 @@ Existem diversos tipos de ferramentas que oferecem o serviço de Sistema de Tick
 No entanto, essas opções acima são todas pagas, e não existem versões gratuitas para utilizar.
 
 ### osTicket
-Como nosso intuito é entender como um sistema de tickets funciona, iremos utilizar a ferramenta **osTicket**, que oferece uma versão gratuíta de demostração.
+Como o intuito do desafio é entender como um Sistema de Ticket funciona, foi utilizado a ferramenta de tickets osTicket, que oferece uma versão gratuita de demonstração.
 Essa ferramenta oferece a capacidade de customizar campos, criar filtros de ticket, atribuir, transferir, e a até a opção de configurar o servidor de SLA (Acordo de Nível de Serviço)
 
 ---
