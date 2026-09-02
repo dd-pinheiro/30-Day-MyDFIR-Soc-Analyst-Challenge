@@ -21,25 +21,25 @@ Novamente, vale ressaltar que todos os servidores deste repositório estão send
 ## 📝 Passo a Passo Realizado
 ### 1) Configurando o Mythic
 Vale ressaltar que essas configurações foram feitas no servidor recém criado.
-  1. Antes de começar a instalação, atualize seus repositórios com `sudo apt update & sudo apt upgrade`
-  2. Instale as ferramentas *Docker Compose* e *make* utilizando a linha de comando `sudo apt install docker-compose make`
-  3. Clone o repositório do Mythic no github utilizando a linha de comando `git clone https://github.com/its-a-feature/mythic`
-  4. Va até o diretório do mythic que você clonou do github e execute o comando `./install_docker_ubuntu.sh`; de forma resumida, esse script irá realizar a instalação do Mythic em sua máquina
-  5. Inicie o serviço do mythic utilizando `mythic-cli start`
+  1. Antes de começar a instalação, atualizei meus repositórios com `sudo apt update & sudo apt upgrade`
+  2. Instalei as ferramentas *Docker Compose* e *make* utilizando a linha de comando `sudo apt install docker-compose make`
+  3. Clonei o repositório do Mythic no github utilizando a linha de comando `git clone https://github.com/its-a-feature/mythic`
+  4. No diretório do mythic que clonei do github e executei o comando `./install_docker_ubuntu.sh`; de forma resumida, esse script irá realizar a instalação do Mythic em sua máquina
+  5. Iniciei o serviço do mythic utilizando `mythic-cli start`
 
 ### 2) Configuração de Firewall na nuvem
-Após finalizar a instalação do Mythic em seu servidor, vá até seu provedor de nuvem e crie um novo Grupo de Firewall; adicione esse grupo de Firewall em seu servidor do Mythic e crie uma regra similar a está:
+Após finalizar a instalação do Mythic em meu servidor, criei um novo grupo de Firewall de Rede; neste novo *Firewall Group*, criei a seguinte regra:
 <img width="907" height="102" alt="image" src="https://github.com/user-attachments/assets/beaec7c2-e416-48b3-8197-b8eff78bbd8e" />
 
-Vale ressaltar que essa regra permitirá conexões em todas as portas apenas de seu IP público. O motivo pelo qual fiz isso é porque utilizaremos o Mythic pelo navegador usando o protocolo HTTP, ou seja, apenas o meu IP público conseguirá interagir com o Mythic por conta desta regra de firewall de rede.
+Vale ressaltar que essa regra permitirá conexões em todas as portas apenas do meu IP público. O motivo pelo qual fiz isso é porque utilizarei o Mythic pelo navegador usando o protocolo HTTP, ou seja, apenas o meu IP público conseguirá interagir com o Mythic por conta desta regra de firewall de rede.
 
 ### 3) Utilizando o Mythic
-1. Para acessar a interface gráfica do Mythic pelo navegador, utilize a URL *http://[ip público do servidor do mythic]:7443*.
+1. Para acessar a interface gráfica do Mythic pelo navegador, utilizei a URL *http://[ip público do servidor do mythic]:7443*.
 <img width="785" height="674" alt="image" src="https://github.com/user-attachments/assets/d69b2cc5-b28c-41e7-8b04-881912bf5a99" />
 
 Por padrão o mythic é configurado para se comunicar através da porta 7443, mas você pode alterar isso no arquivo de configuração.
 
-2. As credenciais para autenticar no mythic estão disponíveis arquivo **.env** localizado no diretório do Mythic; as credenciais estão nas linhas **MYTHIC_ADMIN_PASSWORD** e **MYTHIC_ADMIN_USER**. Para obtê-las, digite a seguinte linha de comando especificando o arquivo **.env**:
+2. As credenciais para autenticar no mythic estão disponíveis arquivo **.env** localizado no diretório do Mythic; as credenciais estão nas linhas **MYTHIC_ADMIN_PASSWORD** e **MYTHIC_ADMIN_USER**. Para obtê-las, digitei a seguinte linha de comando especificando o arquivo **.env**:
 ```
 grep -ie MYTHIC_ADMIN_PASSWORD -e MYTHIC_ADMIN_USER .env
 ```
@@ -47,9 +47,9 @@ grep -ie MYTHIC_ADMIN_PASSWORD -e MYTHIC_ADMIN_USER .env
 ---
 
 ## 💡 Lições Aprendidas e Desafios
-- Aplicação de regras no Firewall na nuvem.
-- Troubleshooting realizado para liberar a porta 7443 no firewall local da máquina.
-- Configuração e hospedagem inicial do Mythic em um servidor.
+- Aplicação de regras no Firewall na nuvem;
+- Troubleshooting realizado para liberar a porta 7443 no firewall local da máquina;
+- Configuração e hospedagem inicial do Mythic em um servidor;
 
 
 
