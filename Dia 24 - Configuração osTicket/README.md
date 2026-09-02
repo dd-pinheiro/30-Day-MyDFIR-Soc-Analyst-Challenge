@@ -22,7 +22,7 @@ No dia 25, iremos realizar a integração do **osTicket** com o **Elasticsearch*
 ### 1) Instalação e Configuração do XAMPP
 Utilizei o XAMPP para hospedar um servidor web para o osTicket. 
 1. Instalei o XAMPP através de seu site oficial [https://www.apachefriends.org/download.html]
-2. Após instalação, fui até o diretório do XAMPP e alterei o arquivo *properties*, mudando apenas o valor da linha "apache_domainname" de localhost para o IP público do meu servidor.
+2. Após instalação, fui até o diretório do XAMPP e alterei o arquivo *properties*, alterando apenas o valor da linha "`apache_domainname`" de localhost para o IP público do meu servidor.
 3. A próxima alteração que fiz, foi adicionar uma regra de *Inbound* no Firewall endpoint do Windows, permitindo conexões com a porta 80 e 433 (HTTP e HTTPS).
 <img width="1007" height="656" alt="image" src="https://github.com/user-attachments/assets/c0c340c7-b57d-4d4d-9317-373e33d514bf" />
 
@@ -30,7 +30,7 @@ Utilizei o XAMPP para hospedar um servidor web para o osTicket.
 1. Aqui, foi necessário alterar a senha do usuário root e pma no painel **phpmyadmin**.
 <img width="1011" height="732" alt="image" src="https://github.com/user-attachments/assets/5dd372d4-2263-4ef7-b141-b71ee67e6f16" />
 
-2. Após realizar a alteração através no painel, alterei o arquivo de configuração **config.inc**, adicionando as informações respectivas às alterações que fiz no painel *phpmyadmin*
+2. Após realizar a alteração através no painel, alterei o arquivo de configuração **config.inc**, adicionando as informações respectivas às alterações que fiz no painel *phpmyadmin*.
 <img width="750" height="510" alt="image" src="https://github.com/user-attachments/assets/3f6b145b-67b0-4eb0-9c60-ddf3ce482334" />
 
 ### 3) Criando Database
