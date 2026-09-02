@@ -9,19 +9,18 @@ Configurar regras de alerta e estruturar visualizações em dashboards no **Kiba
 
 ## Atividades Práticas Realizadas
 ### 1) **Identificação de Padrões no Kibana Discover:**
-1. Acesse a interface do Kibana e navegue até a seção **Discover**. No campo de pesquisa, insira a seguitne Query utilizando a linguagem KQL:
+1. Fui até a seção **Discover** no Elasticsearch e no campo de pesquisa, inseri a seguinte Query utilizando a linguagem KQL:
 `system.auth.ssh.event : * and agent.name: myDFIR-Ubuntu-SSH-Server and system.auth.ssh.event: Failed` 
-2. Logo em seguida, selecione os campos que informam aspectos relevantes para melhor analise diante de uma tentativa de brute force, tais como `host.ip`, `message`, `user.name` e `source.ip`.
-3. Após pesquisar a query e selecionar os campos necessários, crie um Alerta, clicando em "**Alerts**" > "**Create search threshold rule**"; siga o modelo abaixo para mais informações:
+2. Logo em seguida, selecionei os campos que informam aspectos relevantes para melhor analise diante de uma tentativa de brute force, tais como `host.ip`, `message`, `user.name` e `source.ip`.
+3. Após pesquisar a query e selecionar os campos necessários, criei um Alerta, clicando em "**Alerts**" > "**Create search threshold rule**":
 <img width="1186" height="826" alt="image" src="https://github.com/user-attachments/assets/46993f8f-ec25-45bb-b1a3-bf3fbceb7510" />
 
-
 ### 2) **Criação de Dashboard**
-   1. Va até a aba "Maps" e coloque a query utilizada no **Passo 1**.
-   2. Pesquise pela query e logo em seguida selecione "**Add Layer**"
+   1. Na aba "**Maps**" pesquisei pela query utilizada no **Passo 1**: `system.auth.ssh.event : * and agent.name: myDFIR-Ubuntu-SSH-Server and system.auth.ssh.event: Failed` 
+   2. Selecionei a opção de "**Add Layer**"
    3. O mapa de visualização varia de acordo com sua escolha, mas por fins demonstrativos, utilizei o mapa *Choropleth*, que demarca as áreas geográficas de acordo com o *Threshold* do alerta.
-   4. Salve as alterações e crie um novo dashboard.
-   5. Crie um plano de visualização tanto para logins bem sucedidos quanto para tentativas de brute force SSH que tiveram falha. Por último, salve novamente as suas alterações; e finalmente você terá seu dashboard de visualização para atividades SSH:
+   4. Após configurar o mapa, salvei as alterações e criei um novo dashboard.
+   5. Assim como criei um mapa para falhas de login SSH, também criei um mapa para logins bem sucedidos via SSH, dessa forma ficará mais fácil realizar a análise de quem está acessando o sistema e quem tem acesso ao sistema.
 <img width="1436" height="334" alt="image" src="https://github.com/user-attachments/assets/81052ee6-4188-4392-9f09-19816e3b3da8" />
 
 ---
