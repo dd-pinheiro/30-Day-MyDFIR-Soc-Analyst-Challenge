@@ -11,10 +11,10 @@ Compreender os conceitos fundamentais do **Remote Desktop Protocol (RDP)**; anal
 Esse protocolo é utilizado para uma comunicação entre um Servidor e um Cliente. O RDP é encapsulado e utiliza criptografia com o protocolo TCP da camada de Transporte do modelo TCP/IP; utiliza a porta 3389 por padrão.
 
 ### Por que é utilizado?
-Como já dito anteriormente, é utilizado para acesso remoto. Assim, disponibiliza acessibilidade e conforto para realizar troubleshooting em um computador que está a quilômetros de distância. No entanto, a utilização desse protocolo vem como algumas desvantagens, por exemplo, o RDP é explorado em 90% dos ataques cibernéticos.
+Como já dito anteriormente, é utilizado para acesso remoto. Assim, disponibiliza acessibilidade e conforto para realizar troubleshooting em um computador que está a quilômetros de distância. No entanto, a utilização desse protocolo apresenta algumas desvantagens, por exemplo, o RDP é explorado em 90% dos ataques cibernéticos.
 
 ### Como os "Hackers" exploram o RDP?
-Uma das principais maneiras que eles exploram esse protocolo é adquirindo acesso a rede de uma organização através de um dispositivo com RDP exposto para a internet, seja utilizando ataques de força bruta, credenciais fracas ou até credenciais vazadas em ataques anteriores.
+Uma das principais maneiras que eles exploram esse protocolo é adquirindo acesso à rede de uma organização através de um dispositivo com RDP exposto para a internet, seja utilizando ataques de força bruta, credenciais fracas ou até credenciais vazadas em ataques anteriores.
 Os atacantes utilizam serviços OSINT como **shodan.io** ou **censys.com** para encontrar dispositivos com RDP exposto para a internet.
 
 ---
