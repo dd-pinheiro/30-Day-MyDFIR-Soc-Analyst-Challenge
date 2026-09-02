@@ -99,6 +99,7 @@ Na captura de tela abaixo, há uma pequena demonstração de como deve ser feito
 ---
 
 ## 💡 Lições Aprendidas
+- Análise de alertas de Brute-force via SSH
 - Metodologia de Triagem: Sempre cheque o IP de Origem, quais usuários foram afetados; se alguma tentativa obteve sucesso; se sim, quais foram as ações feitas após o login
 - Utilizar plataformas de *Threat Intelligence* para obter informações.
 - Adicionando uma ação a uma regra para gerar Tickets no osTicket.
