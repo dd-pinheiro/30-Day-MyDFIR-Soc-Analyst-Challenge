@@ -3,12 +3,12 @@
 ---
 
 ## 🎯 Objetivo do Dia
-O objetivo deste dia é investigar alertas de ataque de força bruta via SSH no painel de SIEM do Elastic Security. Essa investigação envolve a triagem do alerta, a determinação da natureza maliciosa do IP de origem; a identificação das contas de usuário alvo; a verificação de eventuais tentativas de autenticação bem-sucedidas e a documentação ou resolução adequada do alerta utilizando osTicket.
+O objetivo deste dia foi investigar alertas de ataque de força bruta via SSH no painel de SIEM do Elastic Security. Essa investigação envolve a triagem do alerta, a determinação da natureza maliciosa do IP de origem; a identificação das contas de usuário alvo; a verificação de eventuais tentativas de autenticação bem-sucedidas e a documentação ou resolução adequada do alerta utilizando osTicket.
 
 ---
 
-## Investigação
-Para começar a investigação de seus alertas, vá até a aba "**Security**" e selecione "**Alerts**".
+## Investigação - Passo a Passo
+Para começar a investigação de meus alertas, verifiquei os alertas gerados na aba de "**Security**", em "**Alerts**".
 <img width="1411" height="756" alt="image" src="https://github.com/user-attachments/assets/7c0d20b1-ddc7-4652-9d0e-33a7fba7d365" />
 
 Neste caso, como nosso objetivo principal é investigar alertas de Ataque de Brute-force via SSH, devemos sempre nos questionarmos sobre o que será analisado primeiramente. Abaixo, segue alguns pontos importantes para serem observados ao analisar este tipo de alerta:
@@ -34,25 +34,25 @@ Utilizando a aba de *Discover* no Elasticsearch, utilize uma query personalizada
 Na captura de tela, você claramente consegue verificar que outros usuários também estão sendo afetados pelo Ataque de Força bruta.
 
 ### Algumas dessas tentativas de *Brute-Force* via SSH foi bem-sucedida?
-Novamente, na aba *Discover* pesquise utilizando uma query que mostra se algumas dessas tentativas de Brute-Force foi bem-sucedida:
+Novamente, na aba *Discover* pesquisei utilizando uma query que mostra se algumas dessas tentativas de Brute-Force foi bem-sucedida:
 <img width="1352" height="668" alt="image" src="https://github.com/user-attachments/assets/745b6de3-4154-4f96-b43a-8eccbdb3f1db" />
 
 Como não obtive nenhum resultado na minha, posso afirmar que até o momento ninguém conseguiu executar o ataque de Força bruta com sucesso ao meu servidor.
 
 ### Se sim, que tipo de atividade ocorreu após esse usuário efetuar login?
-Essa pergunta é complementar à pergunta *Algumas dessas tentativas de *Brute-Force via SSH foi bem-sucedida?*. Basicamente você irá realizar uma analise mais detalhada caso identifique que alguma dessas tentativas de Brute-force via SSH foi bem sucedida. Em casos como esse procure:
+Essa pergunta é complementar à pergunta *Algumas dessas tentativas de *Brute-Force via SSH foi bem-sucedida?*. Basicamente você irá realizar uma análise mais detalhada caso identifique que alguma dessas tentativas de Brute-force via SSH foi bem sucedida. Em casos como esse procure:
 - Algum Script foi baixado após o login?
 - Eles utilizaram um comando de *reconhcimento* (`whoami`,`ip a`, `hostname`, `netstat`)?
 - Eles executaram algum comando malicioso?
 
-Existem outras analises que devem ser feitas, mas não citarei todas pois não quero estender esse tema mais que o necessário.
+Existem outras analises que devem ser feitas, mas não citarei todas pois não quero estender esse tema mais que o necessário e deixar a documentação muito longa.
 
 ---
 
 ## Gerando Tickets no osTicket de forma automatizada.
-Nessa parte, iremos fazer com que nossos alertas gerem tickets no osTicket.
-1. Vá até a aba "**Rules**" > **Detection Rules (SIEM)**, também localizada em *Security*; selecione a sua regra de *Brute-Force via SSH*.
-2. Clique em "**Edit Rule Settings**" > **Actions** > Selecione o webhook; note que o nosso conector criado no **Dia 25 - Integração ELK Stack e osTicket** já está pré-selecionado. A única coisa que precisamos mudar é o campo "Body", que irá conter as informações do ticket:
+Nessa parte, criei uma ação para cada vez que um alerta for gerado, um ticket será criado no osTicket.
+1. Em "**Rules**" > **Detection Rules (SIEM)**, também localizada em *Security*; selecionei a regra de *Brute-Force via SSH*.
+2. Em "**Edit Rule Settings**" > **Actions** > Selecionei o webhook; note que o conector criado no **Dia 25 - Integração ELK Stack e osTicket** já está pré-selecionado. A única coisa que precisei mudar é o campo "Body", que irá conter as informações do ticket:
 ```
    <?xml version="1.0" encoding="UTF-8"?>
 <ticket alert="true" autorespond="true" source="API">
@@ -77,8 +77,6 @@ Os campos que estão com chaves; por exemplo `{{rule.name}}`, são variáveis qu
 A variável `{{rule.url}}` é um link que leva o Técnico/analista que irá analisar o ticket direto para o Alerta que gerou esse ticket, dessa forma facilita ainda mais o processo de triagem do Incidente.
 
 <img width="552" height="726" alt="image" src="https://github.com/user-attachments/assets/3c3ef423-1ffd-47be-a1c9-0d9c5803a12d" />
-
-
 
 ---
 
