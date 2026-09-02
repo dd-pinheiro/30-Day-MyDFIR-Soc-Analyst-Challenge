@@ -44,12 +44,13 @@ Além da telemetria gerada, com a integração do EDR no Windows Server, também
 <img width="1257" height="582" alt="image" src="https://github.com/user-attachments/assets/f6898499-dad6-43f3-8fc9-821c34a1c65b" />
 
 Por padrão esses alertas já geram informações relevantes para um processo de triagem de incidente, mas outros campos podem ser adicionados para facilitar mais ainda o processo de investigação.
+
 <img width="521" height="748" alt="image" src="https://github.com/user-attachments/assets/9482dad3-7fbc-4b47-becf-c189333b5349" />
 
 ### 3) Configurando uma ação de resposta
 Aqui, configurei um ação de resposta sempre que for gerado um alerta vindo de origem do Elastic Defender - EDR.
 1. Na aba de "**Security**" vá até **Detection Rules (SIEM**) > Selecione o alerta do Elastic Defender > **Edit Rule Settings**.
-2. Em "Response Actions", selecione Elastic Defend; aqui é possível selecionar uma ação para quando o alerta for gerado. No meu caso selecione a ação de Isolar o host.
+2. Em "Response Actions", selecionei **Elastic Defend**; onde aqui é possível selecionar uma ação para quando o alerta for gerado. No meu caso selecione a ação de Isolar o host.
 <img width="861" height="504" alt="image" src="https://github.com/user-attachments/assets/9c535f3f-1ad3-47a4-b480-df9d416295a5" />
 
 Em relação à ação que escolhi, basicamente, sempre que for identificado uma atividade suspeita, a máquina será isolada da rede local, evitando assim que a ameaça se propague pela rede.
