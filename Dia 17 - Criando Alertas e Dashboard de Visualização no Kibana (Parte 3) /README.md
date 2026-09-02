@@ -10,20 +10,21 @@ Neste dia, você aprenderá a criar um Dashboard que mostrará as atividades RDP
 
 ## Atividades Práticas realizadas
 ### 1) Criação de Dashboard para atividades RDP
-Da mesma forma que foi criado um Mapa no **Dia 14** para eventos relacionados ao SSH, você criará outro Mapa; porém neste mapa deve detalhar apenas atividades RDP (Falhas e Autenticações bem sucedidas).
-1. Vá até a aba "Maps" > pesquise pela *Query* `event.code: 4625 and agent.name: BobServer` > Add Layer > Selecione o modelo *Choropleth* e adicione em um dashboard existente.
-2. Faça o mesmo processo que no mapa acima, porém que a *Query* pela seguinte: `event.code: 4624 and (winlog.event_data.LogonType: 10 or winlog.event_data.LogonType: 7)`
-3. Recomendo que deixe os dois mapas lado a lado para uma melhor comparação:
+Da mesma forma que foi criado um Mapa no **Dia 14** para eventos relacionados ao SSH, criei outro Mapa; porém neste mapa especifiquei apenas atividades RDP (Falhas e Autenticações bem sucedidas).
+1. Na aba "Maps" > pesquisei pela *Query* `event.code: 4625 and agent.name: BobServer` > Add Layer > Selecionei o modelo *Choropleth* e adicionei em um dashboard existente.
+2. Fiz o mesmo processo que no mapa acima, porém a *Query* de pesquisa foi a seguinte: `event.code: 4624 and (winlog.event_data.LogonType: 10 or winlog.event_data.LogonType: 7)`
+Deixei os dois mapas lado a lado para uma melhor comparação:
 <img width="1430" height="347" alt="image" src="https://github.com/user-attachments/assets/5252dc5e-2dbe-4b33-84e0-55311f93b153" />
 
 ### 2. Integração com Mapas Geográficos e Tabelas Detalhadas
 Nesta parte, logo abaixo de cada um desses Mapas, foi criada uma tabela para obter uma visualização mais detalhada de cada atividade envolvendo os protocolos SSH e RDP.
-1. Em seu dashboard, vá até "**New**" > "**Visualization**"
-2. Nessa tela, faça a pesquisa da sua query, seja SSH ou RDP
-3. Agora, arraste os campos localizados no canto direito da tela para o centro. Minha recomendação é utilizar os seguintes campos: `timestamp source.ip user.name source.geo.contry_name`.
+1. No dashboard de RDP e SSH, adicionei uma nova visualização, clicando em "**New**" > "**Visualization**"
+2. Nessa tela, fiz a pesquisa da minha query RDP.
+3. Com a query selecionada, arrastei os campos do lado direito para o centro da tela, com o intuito de "montar" as colunas de minha tabela. Minha recomendação é utilizar os seguintes campos: `timestamp source.ip user.name source.geo.contry_name`.
 <img width="1429" height="766" alt="image" src="https://github.com/user-attachments/assets/50b7fe64-2f8d-46e8-87b1-f319cf809d96" />
 
-4. Por fim, faça os ajustes necessários e clique em "Save and return" para sair da aba de Visualização. Posicione a Tabela embaixo ou ao lado do Mapa respectivo àquela tabela.
+4. Por fim, fiz os ajustes necessários e cliquei em "Save and return" para sair da aba de Visualização e realizei o mesmo procedimento para criação de tabela de visualização para brute force SSH.
+
 ---
 
 ## 📊 Evidências e Capturas de Tela
@@ -36,7 +37,7 @@ Nesta parte, logo abaixo de cada um desses Mapas, foi criada uma tabela para obt
 ---
 
 ## 💡 Lições Aprendidas
-- Criação de regras threshold para atividades RDP no Kibana
+- Criação de regras threshold para atividades RDP e SSH no Kibana
 - Como criar Tabelas de visualização e personalizá-las de acordo com a sua necessidade
 
 
