@@ -12,7 +12,7 @@
 Um sistema de tickets é um sistema que disponibiliza a criação de tickets de forma automática ou manual, e esses tickets podem incluir qualquer coisa; por exemplo, um ticket pode ser um alerta, uma reclamação, ou uma solicitação de *troubleshooting*.
 O objetivo com um sistema de tickets, é monitorar e documentar as tarefas realizadas; com isso podemos manter uma trilha de auditoria e responsabilidade (Accountability).
 
-Ao manter um sistema de Tickets em uma organização, você irá satisfazer um dos **A's** do **Triple A** framework.
+Ao manter um sistema de Tickets em uma organização, você irá satisfazer um dos **A's** do **Triple A (Authorization, Authentication and Accounting)** framework.
 
 Existem diversos tipos de ferramentas que oferecem o serviço de Sistema de Tickets, as mais utilizadas no mercado são:
 - Jira
