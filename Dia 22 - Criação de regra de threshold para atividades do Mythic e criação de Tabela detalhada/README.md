@@ -13,7 +13,7 @@
 Da mesma forma que foi feito nos dias anteriores, realizei uma pesquisa utilizando a linguagem KQL.
 1. Na pesquisa, filtrei pelo `event.code 1`, que o event ID de *Process Create*; basicamente é o event id sempre que o Windows inicia um novo processo
 2. De forma análoga, também inseri na pesquisa o campo `winlog.event_data.Hashes: [número da hash SHA256]`, esse campo vai me ajudar a visualizar a hash especifica colocada como valor; o intuito disso é identificar o malware apenas pela hash, filtrando apenas os eventos que atendem a essa condição
-3. Mesmo alterando o nome do nosso payload, o campo `winlog.event_data.OriginalFileName` continuou com o nome original do arquivo, que nesse caso é o nome do Agente o qual estamos utilizando (**Apollo.exe**); a query completa ficou da seguinte forma:
+3. Mesmo alterando o nome do nosso payload, o campo `winlog.event_data.OriginalFileName` continuou com o nome original do arquivo, que nesse caso é o nome do Agente o qual estou utilizando (**Apollo.exe**); a query completa ficou da seguinte forma:
 ```
 event.code: 1 and (winlog.event_data.Hashes: *43CAD499660E87AC660BE78BF4069944D303A57C1FE0BECDFFD29A2277A030A7* or winlog.event_data.OriginalFileName: Apollo.exe)
 ```
@@ -26,7 +26,7 @@ Nesta parte, criei uma regra de detecção baseada na *Query* que salvei anterio
 <img width="849" height="747" alt="image" src="https://github.com/user-attachments/assets/ae1e35e5-c068-4cdf-8bdb-ffd82ae9301c" />
 
 3. Em "**About Rule**, nomeei de uma forma para que fique possível identificar do que essa regra se trata apenas olhando para o título. Além disso alterei a severidade para Critical.
-4. Na tela de "**Schedule rule**" mantive em 5 minutos cada campo. Por fim, ignorei a fase actions e salvei e criei a nova regra.
+4. Na tela de "**Schedule rule**" mantive em 5 minutos cada campo. Em seguida, salvei a regra e não configurei nenhuma Ação se ocorrer o trigger do alerta.
 <img width="1249" height="651" alt="image" src="https://github.com/user-attachments/assets/be40e2bd-3ea4-4500-8e7c-8fee1e7cc07a" />
 
 ### 3) Criando Dashboards
