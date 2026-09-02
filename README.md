@@ -9,10 +9,11 @@ Este repositório documenta a implementação prática de um ambiente de **Secur
 
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 * **SIEM / Análise de Logs:** Elastic Stack (Elasticsearch, Kibana), Sysmon, Windows Event Logs e Windows Defender
+* **EDR - Endpoint Detection & Response**: Elastic Defend
 * **Infraestrutura em Nuvem:** Vultr Cloud Provider (Linux & Windows Servers)
 * **Command & Control (C2):** Mythic C2 Framework
 * **Sistema de Tickets:** osTicket
-* **Redes e Segurança:** Firewall endpoint e Firewall em Nuvem, SSH, RDP Hardening.
+* **Redes e Segurança:** Firewall Endpoint e Firewall de Rede, SSH, RDP Hardening.
 
 ---
 
