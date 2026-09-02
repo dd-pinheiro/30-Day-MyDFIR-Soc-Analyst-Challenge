@@ -38,7 +38,7 @@ Fui até o diretório */usr/share/elasticsearch/bin* e executei o arquivo *elast
 Com o Token gerado, fui até o navegador e acessei a URL http://45.76.255.250:5601, na qual minha instância está hospedada. Logo em seguida coloquei o token gerado no campo solicitado; por fim, fui até o diretório **/usr/share/kibana/bin** e executei o binário `./kibana-verification-code` para finalizar a sua configuração.
 
 ### 4) API Key Permanente
-Utilizei o usuário e a senha de superusuário gerada no **dia 2** do desafio. Para manter as logs em funcionamento sem perder histórico, foi necessário realizar uma configuração de três chaves aleatórias no diretório **/user/share/kibana/bin**
+Utilizei o usuário e a senha de *superuser* gerada no **dia 2** do desafio. Para manter as logs em funcionamento sem perder histórico, foi necessário realizar uma configuração de três chaves aleatórias no diretório **/user/share/kibana/bin**
 1. Executei o binário `./kibana-encryption-keys generate`
 2. Salvei as três chaves criptografadas em um bloco de notas; pois elas serão armazenadas no *keystore* do kibana.
 3. No mesmo diretório, executei o binário `./kibana-keystore` para cada chave:
@@ -53,7 +53,7 @@ Utilizei o usuário e a senha de superusuário gerada no **dia 2** do desafio. P
     Enter value for xpack.security.encryptionKey: [hash da chave]
    ****************************************************************  
 ```
-Para conferir o resultado, vá até a interface Web do Elastic Search > Security > Alerts; caso não tenha nenhum aviso nesta página, a configuração foi feita da forma correta.
+Para validar a configuração, fui até o Elastic Search > **Security** > **Alerts**.
 
 ---
 
