@@ -22,7 +22,7 @@ Os outros três servidores que compõem a infraestrutura. Esses devem ficar fora
 * Ubuntu com SSH IP exposto para a Internet (Servirá como honeypot para obtermos logs)
 * Fleet Server (Controla os agentes do Elasticsearch instalados nos servidores Windows e Ubuntu)
 
-##### Nota 📝
+### Nota 📝
 Vale ressaltar que os servidores estão dentro do *Cloud Provider* Vultr, que possibilita a máquinas virtuais utilizando recursos na nuvem.
 
 ---
