@@ -3,7 +3,7 @@
 ---
 
 ## 🎯 Objetivo do Dia
-De forma similar ao dia 26, o objetivo deste dia é investigar um alerta de força bruta via RDP no painel de SIEM do Elastic Security, envolvendo triagem do alerta; a determinação da natureza maliciosa do IP de origem, a identificação das contas de usuário alvo, a verificação de eventuais tentativas de autenticação bem-sucedidas e a documentação ou resolução adequada do alerta utilizando osTicket.
+De forma similar ao dia 26, o objetivo deste dia foi investigar os alertas de força bruta via RDP no painel de SIEM do Elastic Security, envolvendo triagem do alerta; a determinação da natureza maliciosa do IP de origem, a identificação das contas de usuário alvo, a verificação de eventuais tentativas de autenticação bem-sucedidas e a documentação ou resolução adequada do alerta utilizando osTicket.
 
 Essa documentação será bem similar à que foi feita no dia anterior, a única diferença aqui é que será feita a análise do protocolo RDP.
 
@@ -40,15 +40,15 @@ Como não obtive nenhum resultado na minha, posso afirmar que até o momento nin
 ### Se sim, que tipo de atividade ocorreu após esse usuário efetuar login?
 Essa pergunta é complementar à pergunta *Algumas dessas tentativas de Brute-Force via SSH foi bem-sucedida?. Basicamente, uma análise mais detalhada será necessária caso identifique que uma ou mais dessas tentativas de Brute-force via RDP foi bem sucedida. Procure por informações relevantes, tais como:
 - Algum Script foi baixado após o login?
-- Eles utilizaram um comando de reconhecimento (`ipconfig` `hostname`, `netstat`, `whoami)?
+- Eles utilizaram um comando de reconhecimento (`ipconfig` `hostname`, `netstat`, `whoami`)?
 - Eles executaram algum comando malicioso?
 
 ---
 
 ## Gerando Tickets no osTicket de forma automatizada.
-Nessa parte, iremos fazer com que nossos alertas gerem tickets no osTicket.
-1. Vá até a aba "**Rules**" > **Detection Rules (SIEM)**, também localizada em *Security*; selecione a sua regra de *Brute-Force via RDP*.
-2. Clique em "**Edit Rule Settings**" > **Actions** > Selecione o webhook; note que o nosso conector criado no **Dia 25 - Integração ELK Stack e osTicket** já está pré-selecionado. A única coisa que precisamos mudar é o campo "Body", que irá conter as informações do ticket.
+Nessa parte, criei uma ação para cada vez que um alerta for gerado, um ticket será criado no osTicket.
+1. Em "**Rules**" > **Detection Rules (SIEM)**, também localizada em *Security*; selecionei a regra de *Brute-Force via RDP*.
+2. Em "**Edit Rule Settings**" > **Actions** > Selecionei o webhook; note que o conector criado no **Dia 25 - Integração ELK Stack e osTicket** já está pré-selecionado. A única coisa que precisei mudar é o campo "Body", que irá conter as informações do ticket:
 ```
    <?xml version="1.0" encoding="UTF-8"?>
 <ticket alert="true" autorespond="true" source="API">
@@ -92,8 +92,7 @@ Além disso, vale ressaltar, que antes de começar a tratativa de um ticket, sem
 ---
 
 ## 💡 Lições Aprendidas
+- Análise de Alertas de Brute-force via RDP
 - Metodologia de Triagem: Sempre cheque o IP de Origem, quais usuários foram afetados; se alguma tentativa obteve sucesso; se sim, quais foram as ações feitas após o login
-- Utilizar plataformas de *Threat Intelligence* para obter informações.
-- Adicionando uma ação a uma regra para gerar Tickets no osTicket.
 
 
