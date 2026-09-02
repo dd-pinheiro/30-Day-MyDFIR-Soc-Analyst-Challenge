@@ -10,7 +10,7 @@ Essa documentação será bem similar à que foi feita no dia anterior, a única
 --- 
 
 ### Investigação
-Da mesma forma que realizamos a analise de ataque de força bruta via SSH no **Dia 26 - Investigando Ataques de Força Bruta via SSH**, realizaremos também a analise de ataque de força bruta via RDP, porque mesmo sendo protocolos diferentes, a mesma metodologia será utilizada. Novamente, você deve analisar os seguintes pontos:
+Da mesma forma que realizamos a análise de ataque de força bruta via SSH no **Dia 26 - Investigando Ataques de Força Bruta via SSH**, realizaremos também a analise de ataque de força bruta via RDP, porque mesmo sendo protocolos diferentes, a mesma metodologia pode ser utilizada:
 - Analise o IP de origem - Ele é conhecido como malicioso?
 - Há outros usuários que estão sendo afetados por este IP?
 - Algumas dessas tentativas de *Brute-Force* via RDP foi bem-sucedida?
@@ -19,7 +19,7 @@ Da mesma forma que realizamos a analise de ataque de força bruta via SSH no **D
 Antes de começar, vá até até a aba **Security** no Elastic search > selecione **Alerts** e filtre pelo alerta de brute força via RDP.
 <img width="1431" height="765" alt="image" src="https://github.com/user-attachments/assets/e4700b5e-7b1e-46c3-bd47-81df0a36c8b1" />
 
-### Análise o IP de origem - Ele é conhecido como malicioso?
+### Analise o IP de origem - Ele é conhecido como malicioso?
 Como demonstração, utilizei o IP *185.118.79.103* e o pesquisei no AbuseIPDB [https://www.abuseipdb.com]
 <img width="1641" height="819" alt="image" src="https://github.com/user-attachments/assets/16f812c8-3105-4113-8b98-e2dfc608ba84" />
 
@@ -38,8 +38,7 @@ Novamente, na aba Discover pesquise utilizando uma query que mostra se algumas d
 Como não obtive nenhum resultado na minha, posso afirmar que até o momento ninguém conseguiu executar o ataque de Força bruta com sucesso ao meu servidor Windows.
 
 ### Se sim, que tipo de atividade ocorreu após esse usuário efetuar login?
-Essa pergunta é complementar à pergunta *Algumas dessas tentativas de Brute-Force via SSH foi bem-sucedida?. Basicamente você irá realizar uma analise mais detalhada caso identifique que alguma dessas tentativas de Brute-force via SSH foi bem sucedida. Em casos como esse procure:
-
+Essa pergunta é complementar à pergunta *Algumas dessas tentativas de Brute-Force via SSH foi bem-sucedida?. Basicamente, uma análise mais detalhada será necessária caso identifique que uma ou mais dessas tentativas de Brute-force via RDP foi bem sucedida. Procure por informações relevantes, tais como:
 - Algum Script foi baixado após o login?
 - Eles utilizaram um comando de reconhecimento (`ipconfig` `hostname`, `netstat`, `whoami)?
 - Eles executaram algum comando malicioso?
