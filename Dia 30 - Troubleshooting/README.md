@@ -36,5 +36,5 @@ Como esse projeto é apenas um laborátorio, não especifiquei um IP de origem; 
 ---
 
 ## 💡Lições Aprendidas
-- Criação de regras de Firewall Endpoint e Firewall de rede.
-- 
+- Investigação de erros de conexão endpoint
+- Configuração de regras em Firewall Endpoint e Firewall de rede.
