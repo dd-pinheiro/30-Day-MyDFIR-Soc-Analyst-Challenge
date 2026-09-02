@@ -27,7 +27,7 @@
 
 ---
 
-## ⚠️ Atenção
+## ⚠️ Pontos de Atenção
 * **Volume de Dados e Ruído:** O Sysmon gera uma quantidade massiva de logs. Sem uma configuração adequada, irá mais prejudicar o ambiente de monitoração do que ajudar.
 
 ---
